@@ -10,9 +10,9 @@ const PORT = 8000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
-app.use("/" , (req,res)=>{
-  res.send("Server is running")
-})
+// app.use("/" , (req,res)=>{
+//   res.send("Server is running")
+// })
 app.use("/api/date", require("./routes/dataRoutes"));
 app.use("/api/agenda", require("./routes/agendaRoutes"));
 // app.get("/api/date", (req, res) => {
