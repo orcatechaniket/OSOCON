@@ -15,7 +15,7 @@ app.use("/api/agenda", require("./routes/agendaRoutes"));
 app.use("/api/hall", require("./routes/hallRoutes"));
 app.use("/api/session", require("./routes/sessionRoutes"));
 app.use("/api/title" , require("./routes/titleRoutes"))
-app.use("/", require("./routes/frontend"))
+
 // app.get("/api/date", (req, res) => {
 //   res.send("hello");
 // });
