@@ -48,9 +48,22 @@ const filter = asyncHandler(async (req,res) => {
       res.status(400).json({message : "No agenda found"})
     }
   })
+
+  const getOneTitle = asyncHandler(async(req,res) => {
+    const id = req.params.id
+    // console.log(id)
+    const list = await Title.find({_id: id}).populate("papers").exec()
+    if(list){
+        // console.log(list)
+        res.status(200).json({list})
+    }else{
+        res.status(400).json({message : "Not found"})
+    }
+  })
 module.exports = {
     createTitle,
     getTitle,
     deleteTitle,
-    filter
+    filter,
+    getOneTitle
 }

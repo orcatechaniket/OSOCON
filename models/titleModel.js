@@ -27,8 +27,9 @@ const titleSchema = mongoose.Schema(
     chairperson: [String],
     topic: [
       {
-        topicTitle: String,
-        speaker: String,
+        topicTitle: [String],
+        speaker: [String],
+      
       },
     ],
   },
