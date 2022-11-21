@@ -4,7 +4,7 @@ const asyncHandler = require("express-async-handler");
 
 const createDate = asyncHandler(async (req, res) => {
   const { date } = req.body;
-  const data = req.body;
+
   console.log(date);
 
   if (!date) {
