@@ -2,9 +2,8 @@ const Hall = require("../models/hallModel");
 const asyncHandler = require("express-async-handler");
 
 const createHall = asyncHandler(async (req, res) => {
-  const { hall, date } = req.body;
+  const { hall } = req.body;
   const list = await Hall.create({
-    date: date,
     hall: hall,
   });
 

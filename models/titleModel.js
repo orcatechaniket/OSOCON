@@ -3,40 +3,34 @@ const mongoose = require("mongoose");
 const titleSchema = mongoose.Schema(
   {
     date: {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      ref: "Date",
+      type: String,
     },
     hall: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: "Hall",
+      type: String,
     },
-    session :{
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: "Session",
+    session: {
+      type: String,
     },
-    title : {
-        type: String
+    title: {
+      type: String,
     },
-    moderator : [String] ,
-    panelist : [String],
-    judges : [String],
-    papers : [
-        {
-            paperTitle : String,
-            author : String
-        }
+    moderator: [String],
+    panelist: [String],
+    judges: [String],
+    papers: [
+      {
+        paperTitle: String,
+        author: String,
+      },
     ],
     convenor: [String],
-    chairperson : [String],
-    topic : [
-        {
-            topicTitle : String,
-            speaker : String
-        }
-    ]
+    chairperson: [String],
+    topic: [
+      {
+        topicTitle: String,
+        speaker: String,
+      },
+    ],
   },
   {
     timestamps: true,

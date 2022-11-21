@@ -12,7 +12,7 @@ const createDate = asyncHandler(async (req, res) => {
     return;
   }
 
-  const dateCreate = await Date.create({ date: req.body.date });
+  const dateCreate = await Date.create({ date: date});
 
   if (dateCreate) {
     res.status(201).json(dateCreate);

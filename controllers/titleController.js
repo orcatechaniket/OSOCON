@@ -19,7 +19,7 @@ const createTitle = asyncHandler(async(req,res) => {
 })
 
 const getTitle = asyncHandler(async(req,res) => {
-    const list = await Title.find({}).exec()
+    const list = await Title.find({}).populate("date").populate("hall").populate("session").exec()
     if(list){
         res.status(200).json({list})
     }else {
@@ -38,8 +38,19 @@ const deleteTitle = asyncHandler(async(req,res) => {
     }
 })
 
+const filter = asyncHandler(async (req,res) => {
+    const {date , hall , session} = req.body
+    const list = await Title.find({date : date , hall : hall , session : session })
+  
+    if(list){
+      res.status(200).json({list})
+    }else{
+      res.status(400).json({message : "No agenda found"})
+    }
+  })
 module.exports = {
     createTitle,
     getTitle,
-    deleteTitle
+    deleteTitle,
+    filter
 }
