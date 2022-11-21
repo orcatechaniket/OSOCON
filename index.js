@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const dotenv = require("dotenv").config();
 const connectDB = require("./config/db");
 connectDB();
-const flush = require("connect-flash")
 const PORT = 8000;
 
 app.use(bodyParser.json());
