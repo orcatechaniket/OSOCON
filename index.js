@@ -11,12 +11,6 @@ const PORT = 8000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
-app.use(express.static("public"));
-app.set("view engine", "ejs");
-app.use(flush())
-// app.use("/" , (req,res)=>{
-//   res.send("Server is running")
-// })
 app.use("/api/date", require("./routes/dataRoutes"));
 app.use("/api/agenda", require("./routes/agendaRoutes"));
 app.use("/api/hall", require("./routes/hallRoutes"));
