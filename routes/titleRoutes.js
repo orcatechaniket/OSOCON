@@ -16,5 +16,5 @@ router.put("/title/convenor/:id" , updateConvenor)
 router.put("/title/paper/:id" , updatePaper)
 router.put("/title/chairperson/:id" , updateChairperson)
 router.post("/filter" , filter)
-router.post("/filter1" , filter1)
+
 module.exports = router ;
