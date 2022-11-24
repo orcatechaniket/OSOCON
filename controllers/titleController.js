@@ -49,16 +49,16 @@ const filter = asyncHandler(async (req,res) => {
     }
   })
 
-const filter1 = asyncHandler(async (req,res) => {
-    const {date , hall } = req.body
-    const list = await Title.find({date : date , hall : hall })
+// const filter1 = asyncHandler(async (req,res) => {
+//     const {date , hall } = req.body
+//     const list = await Title.find({date : date , hall : hall })
   
-    if(list){
-      res.status(200).json({list})
-    }else{
-      res.status(400).json({message : "No agenda found"})
-    }
-  })
+//     if(list){
+//       res.status(200).json({list})
+//     }else{
+//       res.status(400).json({message : "No agenda found"})
+//     }
+//   })
 
   const getOneTitle = asyncHandler(async(req,res) => {
     const id = req.params.id
