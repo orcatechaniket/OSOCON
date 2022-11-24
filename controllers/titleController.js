@@ -77,5 +77,5 @@ module.exports = {
     deleteTitle,
     filter,
     getOneTitle,
-    filter1
+    
 }
