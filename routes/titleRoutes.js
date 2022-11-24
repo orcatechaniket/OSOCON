@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router();
-const {createTitle , getTitle , deleteTitle , filter , getOneTitle} = require("../controllers/titleController")
+const {createTitle , getTitle , deleteTitle , filter,filter1 , getOneTitle} = require("../controllers/titleController")
 const {updateJudges , updateModerator, updatePanelist , updatePaper , updateTopic , updateConvenor, updateChairperson} = require("../controllers/moderatorController")
 
 
@@ -16,4 +16,5 @@ router.put("/title/convenor/:id" , updateConvenor)
 router.put("/title/paper/:id" , updatePaper)
 router.put("/title/chairperson/:id" , updateChairperson)
 router.post("/filter" , filter)
+router.post("/filter" , filter1)
 module.exports = router ;
