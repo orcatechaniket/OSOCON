@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router();
-const {createTitle , getTitle , deleteTitle , filter,filter1 , getOneTitle} = require("../controllers/titleController")
+const {createTitle , getTitle , deleteTitle , filter, getOneTitle} = require("../controllers/titleController")
 const {updateJudges , updateModerator, updatePanelist , updatePaper , updateTopic , updateConvenor, updateChairperson} = require("../controllers/moderatorController")
 
 
